@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hilton Clinics — Port Harcourt Website
 
-## Getting Started
+Full-stack Next.js website for **Hilton Clinics** (2 Ejekwu Wike Street, Mile 4, off Ada-George Road, Rumuepirikom, Port Harcourt, Rivers State).
 
-First, run the development server:
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` — Home (hero search & quick booking, interactive specialties showcase, leadership & approach, flagship renal/dialysis centre, patient visit journey, live Ada-George Google Map & Port Harcourt clock, patient FAQs)
+- `/services` & `/services/[slug]` — Full filterable department directory and individual clinical guides
+- `/book` — Multi-step appointment booking with live time-slot availability, reference code receipt, and pre-filled WhatsApp confirmation
+- `/appointment` — Patient self-service booking lookup, rescheduling, and cancellation
+- `/contact` — Live Google Map, Ada-George / Wimpey road directions, 24-hour emergency numbers, WhatsApp front desk, and callback form
+- `/about` — Story, medical leadership (Prof. Okafor Umezurike Hughes), and facility gallery
+- `/patients` — Practical preparation notes, clinic hours, and emergency instructions
+- `/admin` — Staff Front-Desk Portal for confirming/updating bookings and replying to callback enquiries
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Clinic details, phones, WhatsApp number, and map coordinates:** edit `src/lib/site.ts`.
+- **Staff Portal (`/admin`) passcode:** defaults to `hilton2026` locally. Set `ADMIN_PASSCODE` and `SESSION_SECRET` in `.env.local` for production.
+- **Local database:** appointments and enquiries are saved atomically to `data/clinic-db.json` (created automatically on first submission).
