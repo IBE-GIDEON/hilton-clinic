@@ -2,11 +2,10 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import Link from "next/link";
 import { SectionLabel } from "../section-label";
 import { EASE, Reveal, SplitLines } from "../motion";
-import { Minus, Plus, WhatsApp } from "../icons";
-import { site, whatsappLink } from "@/lib/site";
+import { Minus, Plus } from "../icons";
+import { site } from "@/lib/site";
 
 const faqs = [
   {
@@ -54,19 +53,6 @@ export function Questions() {
               <p className="mt-6 max-w-md text-[15.5px] leading-relaxed text-ink-soft">
                 If you are unsure which department to book, what a test requires, or whether you should come in right away, ask us directly.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href={whatsappLink("Hello Hilton Clinics, I have a question before visiting.")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-[3px] bg-ink px-5 py-3 text-[13px] font-medium text-white transition-colors hover:bg-blue"
-                >
-                  <WhatsApp size={15} /> Ask on WhatsApp
-                </a>
-                <Link href="/patients" className="link-u text-[13.5px] font-medium text-blue">
-                  Full patient guide →
-                </Link>
-              </div>
               <p className="mt-6 text-[13px] text-muted">
                 Urgent medical concern? Call <a href={`tel:${site.phones.emergency.tel}`} className="font-medium text-ink underline-offset-2 hover:underline">{site.phones.emergency.display}</a> immediately.
               </p>

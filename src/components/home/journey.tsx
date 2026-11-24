@@ -1,10 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { SectionLabel } from "../section-label";
 import { DrawLine, SplitLines, Stagger, StaggerItem, Reveal } from "../motion";
-import { ButtonLink } from "../button";
-import { whatsappLink } from "@/lib/site";
 
 const steps = [
   {
@@ -71,20 +68,6 @@ export function Journey() {
           ))}
         </Stagger>
 
-        <Reveal delay={0.15} className="mt-12 flex flex-wrap items-center justify-between gap-4 rounded-[3px] border border-line bg-paper px-7 py-6">
-          <div>
-            <p className="text-[15.5px] font-medium text-ink">Ready to plan your visit?</p>
-            <p className="mt-1 text-[14px] text-muted">
-              Check live appointment slots online, or <Link href="/patients" className="text-blue underline-offset-2 hover:underline">read our patient preparation guide</Link>.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <ButtonLink href="/book" variant="primary">Book an appointment</ButtonLink>
-            <ButtonLink href={whatsappLink()} variant="outline" external arrow={false}>
-              Message on WhatsApp
-            </ButtonLink>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

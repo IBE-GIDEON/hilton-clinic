@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react";
 import { SectionLabel } from "../section-label";
 import { Reveal, SplitLines } from "../motion";
-import { ButtonLink } from "../button";
-import { site, mapsDirections, mapsEmbed, whatsappLink } from "@/lib/site";
-import { Clock, MapPin, Navigation, Phone, WhatsApp } from "../icons";
+import { site, mapsDirections, mapsEmbed } from "@/lib/site";
+import { Clock, MapPin, Navigation, Phone } from "../icons";
 
 function PortHarcourtClock() {
   const [time, setTime] = useState<string>("");
@@ -152,19 +151,6 @@ export function LocationBand() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3 border-t border-line-soft pt-6">
-              <ButtonLink href="/book" variant="primary" className="flex-1">
-                Book a visit
-              </ButtonLink>
-              <a
-                href={whatsappLink("Hello Hilton Clinics, please can you share directions to the clinic?")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex flex-1 items-center justify-center gap-2 rounded-[3px] bg-[#1f7a4d] px-5 py-3.5 text-[13px] font-medium text-white transition-colors hover:bg-[#17613c]"
-              >
-                <WhatsApp size={16} /> WhatsApp us
-              </a>
-            </div>
           </Reveal>
         </div>
       </div>
