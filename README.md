@@ -1,6 +1,6 @@
 # Hilton Clinics — Port Harcourt Website
 
-Full-stack Next.js website for **Hilton Clinics** (2 Ejekwu Wike Street, Mile 4, off Ada-George Road, Rumuepirikom, Port Harcourt, Rivers State).
+Next.js website for **Hilton Clinics** (2 Ejekwu Wike Street, Mile 4, off Ada-George Road, Rumuepirikom, Port Harcourt, Rivers State).
 
 ## Running locally
 
@@ -11,19 +11,19 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Key pages
+## What is built
 
-- `/` — Home (hero search & quick booking, interactive specialties showcase, leadership & approach, flagship renal/dialysis centre, patient visit journey, live Ada-George Google Map & Port Harcourt clock, patient FAQs)
-- `/services` & `/services/[slug]` — Full filterable department directory and individual clinical guides
-- `/book` — Multi-step appointment booking with live time-slot availability, reference code receipt, and pre-filled WhatsApp confirmation
-- `/appointment` — Patient self-service booking lookup, rescheduling, and cancellation
-- `/contact` — Live Google Map, Ada-George / Wimpey road directions, 24-hour emergency numbers, WhatsApp front desk, and callback form
-- `/about` — Story, medical leadership (Prof. Okafor Umezurike Hughes), and facility gallery
-- `/patients` — Practical preparation notes, clinic hours, and emergency instructions
-- `/admin` — Staff Front-Desk Portal for confirming/updating bookings and replying to callback enquiries
+- `/` — Home: hero, Our Mission, all ten specialties, Find Us (map, hours, phone) and Questions & Answers.
+- Ctrl/Cmd + K opens a "find care" search over the specialties.
+
+## Under construction
+
+These routes currently show an "Under Construction" placeholder and will be completed once the project is signed off:
+`/about`, `/services`, `/services/[slug]`, `/patients`, `/contact`, `/book`, `/appointment`, `/admin`.
+
+The original booking flow, booking manager, contact form, staff portal and their API routes are kept in git history
+(commit `3b44fdd` and earlier) and can be restored from there when that work begins.
 
 ## Configuration
 
-- **Clinic details, phones, WhatsApp number, and map coordinates:** edit `src/lib/site.ts`.
-- **Staff Portal (`/admin`) passcode:** defaults to `hilton2026` locally. Set `ADMIN_PASSCODE` and `SESSION_SECRET` in `.env.local` for production.
-- **Local database:** appointments and enquiries are saved atomically to `data/clinic-db.json` (created automatically on first submission).
+Clinic details, phone numbers, WhatsApp number and map coordinates live in `src/lib/site.ts`.

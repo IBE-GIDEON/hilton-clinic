@@ -46,7 +46,8 @@ function Row({ slug, index }: { slug: string; index: number }) {
             as="h3"
             lines={b.title}
             delay={0.05}
-            className="mt-6 font-[family-name:var(--font-display)] text-[clamp(2.3rem,4.4vw,4rem)] font-semibold leading-[1.03] tracking-[-0.045em] text-ink"
+            italicLast
+            className="title-serif mt-5 text-[clamp(2.8rem,5vw,4.6rem)] text-ink"
           />
           <motion.div
             initial={{ opacity: 0 }}
@@ -105,7 +106,8 @@ export function Specialties() {
             </motion.div>
             <RevealLines
               lines={["Ten Clinics.", "One Roof."]}
-              className="mt-7 font-[family-name:var(--font-display)] text-[clamp(2.7rem,5.2vw,4.75rem)] font-semibold leading-[1.02] tracking-[-0.045em] text-ink"
+              italicLast
+            className="title-serif mt-6 text-[clamp(3.2rem,6vw,5.6rem)] text-ink"
             />
           </div>
         </div>

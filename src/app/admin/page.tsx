@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { AdminDesk } from "@/components/admin-desk";
+import { UnderConstruction } from "@/components/under-construction";
 
 export const metadata: Metadata = {
-  title: "Front Desk Staff Portal",
-  robots: { index: false, follow: false },
+  title: "Staff Portal",
+  robots: { index: false, follow: true },
 };
 
 export default function AdminPage() {
-  return <AdminDesk />;
+  return <UnderConstruction a="staff" b="portal." />;
 }

@@ -1,25 +1,28 @@
 import Link from "next/link";
-import { ButtonLink } from "@/components/button";
 import { site } from "@/lib/site";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-[75vh] items-center bg-paper pt-32 pb-20">
-      <div className="container-x">
-        <p className="eyebrow text-blue">404 · Page Not Found</p>
-        <h1 className="display mt-4 text-[clamp(2.5rem,6vw,5rem)] text-ink">
-          We couldn&apos;t find that page.
-        </h1>
-        <p className="lede mt-5 max-w-xl">
-          The page you looked for may have moved. You can return home, explore our specialties, or call our 24-hour desk on {site.phones.emergency.display}.
+    <section className="flex min-h-[100svh] items-center bg-[#f4f5f6]">
+      <div className="mx-auto w-full max-w-[1240px] px-5 pb-24 pt-36 sm:px-8">
+        <p className="text-[14.5px] font-medium tracking-[-0.01em]">
+          <span className="text-ink">page</span>
+          <span className="text-ink/35">not found.</span>
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <ButtonLink href="/" variant="primary">Back to home</ButtonLink>
-          <Link href="/book" className="rounded-[3px] border border-ink/20 px-6 py-3.5 text-[13px] font-medium text-ink hover:border-ink">
-            Book an appointment
+        <h1 className="title-serif mt-6 text-[clamp(3.6rem,8vw,7.5rem)] text-ink">
+          Nothing
+          <br />
+          <span className="italic">Here.</span>
+        </h1>
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[14px] font-medium">
+          <Link href="/" className="text-ink transition-colors hover:text-sky-600">
+            Back to home
           </Link>
+          <a href={`tel:${site.phones.emergency.tel}`} className="text-ink/60 transition-colors hover:text-ink">
+            Call {site.phones.emergency.display}
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

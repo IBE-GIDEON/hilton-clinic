@@ -76,6 +76,14 @@ body {
     line-height: 1.05;
   }
 
+  /* Mature editorial serif for section headlines (Mission, Specialties, Find Us) */
+  .title-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
+  }
+
   /* Italic serif accent used inside headlines */
   .serif {
     font-family: var(--font-serif);

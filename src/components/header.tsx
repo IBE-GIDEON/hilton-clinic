@@ -33,8 +33,6 @@ export function Header() {
     };
   }, [open]);
 
-  if (pathname.startsWith("/admin")) return null;
-
   const isActive = (href: string) => pathname === href || (href !== "/services" && pathname.startsWith(href));
 
   return (

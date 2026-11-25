@@ -27,7 +27,8 @@ export function Mission() {
 
           <RevealLines
             lines={["Listen First.", "Then Heal."]}
-            className="mt-7 font-[family-name:var(--font-display)] text-[clamp(2.7rem,5.2vw,4.75rem)] font-semibold leading-[1.02] tracking-[-0.045em] text-ink"
+            italicLast
+            className="title-serif mt-6 text-[clamp(3.2rem,6vw,5.6rem)] text-ink"
           />
 
           <motion.p

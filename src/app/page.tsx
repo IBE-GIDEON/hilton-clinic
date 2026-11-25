@@ -1,9 +1,8 @@
 import { Hero } from "@/components/home/hero";
 import { Mission } from "@/components/home/mission";
 import { Specialties } from "@/components/home/specialties";
-import { Journey } from "@/components/home/journey";
-import { LocationBand } from "@/components/home/location-band";
-import { Questions } from "@/components/home/questions";
+import { FindUs } from "@/components/home/find-us";
+import { Faq } from "@/components/home/faq";
 
 export default function HomePage() {
   return (
@@ -11,9 +10,8 @@ export default function HomePage() {
       <Hero />
       <Mission />
       <Specialties />
-      <Journey />
-      <LocationBand />
-      <Questions />
+      <FindUs />
+      <Faq />
     </>
   );
 }
